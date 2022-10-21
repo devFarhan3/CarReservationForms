@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Forms</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/carss.png">
+    <!-- FontAwesome-cdn include -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google fonts include -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Lato&display=swap" rel="stylesheet">
+    <!-- Bootstrap-css include -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Animate-css include -->
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <!-- Main-StyleSheet include -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+
+</head>
+
+<body>
+    <div class="wrapper position-relative overflow-hidden">
+        <div class="container-md-fluid p-3  ">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="form_logo position-absolute">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="image-not-found">
+                        </a>
+                    </div>
+                    <div class="steps_area step_area_fixed d-none d-xl-block">
+                        <div class="image_holder">
+                            <img class="overflow-hidden" src="assets/images/carBookss.png" alt="image-not-found">
+                        </div>
+                        <div class="step_items position-absolute">
+                            <div class="step d-block text-center bg-white position-relative current active">1</div>
+                            <div class="step d-block text-center bg-white position-relative">2
+                            </div>
+                            <div class="step d-block text-center bg-white position-relative">3
+                            </div>
+                            <div class="step d-block text-center bg-white position-relative last">4
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-8 ps-3 pt-4">
+                    <form class="multisteps_form" id="wizard" method="POST" action="">
+                        <!-- ------------------ Step-1 ------------------- -->
+                        <div class="multisteps_form_panel" style="display: block;">
+                            <div class="step_content d-flex justify-content-between pt-5 pb-2">
+                                <h4>Reservations
+                                </h4>
+                                <span class="text-end ">Step 1 to 4</span>
+                            </div>
+                            <div class="step_progress_bar">
+                                <div class="progress rounded-pill">
+                                    <div class="progress-bar" style="width:25%"></div>
+                                </div>
+                            </div>
+                            <div class="form_content">
+                                <div class="question_title py-3">
+                                    <h1 class="text-capitalize">Request
+                                    </h1>
+                                </div>
+                                <div class="row">
+                                    <form>
+                                        <div class="row  animate__animated animate__fadeInRight animate_100ms">
+
+                                            <div class="form-group col-md-6 col-sm-6 col-12 pb-3">
+                                                <label for="inputPassword4">Pickup Date</label>
+                                                <div class="input-group date" id="datepicker">
+                                                    <input type="text" class="form-control" id="date">
+                                                    <span class="input-group-append">
+                                                        <span class="input-group-text d-block">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-md-6 col-sm-6 col-12 pb-3">
+                                                <label for="inputPassword4">Pickup Time</label>
+                                                <input type="time" class="form-control" id="inputPassword4" placeholder="10:00">
+                                            </div>
+
+
+
+                                            <div class="form-group col-md-6 col-sm-6 col-12 pb-3">
+                                                <label for="inputPassword4">Dropoff Date</label>
+                                                <div class="input-group date" id="datepicker_1">
+                                                    <input type="text" class="form-control" id="date">
+                                                    <span class="input-group-append">
+                                                        <span class="input-group-text  d-block">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-md-6 col-sm-6 col-12 pb-3">
+                                                <label for="inputPassword4">Dropoff Time</label>
+                                                <input type="time" class="form-control" id="inputPassword4" placeholder="10:00">
+                                            </div>
+
+                                            <div class="form-group col-sm-6 col-12 pb-3 ">
+                                                <label for="Pickup Location">Minimum Age</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected="">25+</option>
+                                                    <option value="1">20</option>
+                                                    <option value="2">21</option>
+
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-6 col-12 pb-3">
+                                                <label for="Pickup Location">Category Type</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected="">All</option>
+                                                    <option value="1">car</option>
+                                                    <option value="2">cars</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group pt-2">
+
+                                                <input type="text" class="form-control" id="inputAddress2" placeholder="Promo-code if any">
+                                            </div>
+                                        </div>
+                                        <!-- row ends here -->
+
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form_btn pt-5 d-flex justify-content-between">
+                                <button type="button" class="prev_btn text-uppercase bg-white" id="prevBtn" onclick="nextPrev(-1)" style="display: none;"><span><i
+                                            class="fas fa-arrow-left"></i></span> 
+                                    Back</button>
+                                <button type="button" class="next_btn  text-white" id="nextBtn" onclick="nextPrev(1)">Next <span><i class="fas fa-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                        <!-- ------------------ Step-2 ------------------- -->
+                        <div class="multisteps_form_panel">
+                            <div class="step_content d-flex justify-content-between pt-5 pb-2">
+                                <h4>Reservations
+                                </h4>
+                                <span class="text-end">Step 2 to 4</span>
+                            </div>
+                            <div class="step_progress_bar">
+                                <div class="progress rounded-pill">
+                                    <div class="progress-bar" style="width:50%"></div>
+                                </div>
+                            </div>
+                            <div class="form_content">
+                                <div class="question_title py-3">
+                                    <h1 class="text-capitalize">Select</h1>
+                                </div>
+                                <div class="row ">
+                                    <form class="step_2">
+                                        <div class="row  animate__animated animate__fadeInRight animate_100ms">
+
+                                            <div class="form-group col-md-3 col-sm-3 col-12 pb-3">
+                                                <label for="inputPassword4">Pickup Date</label>
+                                                <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
+                                            </div>
+
+                                            <div class="form-group col-md-3 col-sm-3 col-12 pb-3">
+                                                <label for="inputPassword4">Pickup Time</label>
+                                                <input type="time" class="form-control" id="inputPassword4" placeholder="10:00">
+                                            </div>
+
+                                            <!-- <div class="form-group pb-3 col-md-6 col-sm-6 col-12">
+                                                <label for="Pickup Location">Return</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Coconut Grove (Depot)</option>
+                                                    <option value="1">Darwin Airport (Via FREE Shuttle to/from Depot)</option>
+                                                    <option value="2">Hotel (FREE Shuttle to/from Depot)</option>
+            
+                                                </select>
+                                            </div> -->
+
+                                            <div class="form-group col-md-3 col-sm-3 col-12 pb-3">
+                                                <label for="inputPassword4">Return Date</label>
+                                                <input type="date" class="form-control" id="inputPassword4" placeholder="Password">
+                                            </div>
+
+                                            <div class="form-group col-md-3 col-sm-3 col-12 pb-3">
+                                                <label for="inputPassword4">Return Time</label>
+                                                <input type="time" class="form-control" id="inputPassword4" placeholder="10:00">
+                                            </div>
+
+                                            <div class="form-group col-md-6 col-12 pb-3 ">
+                                                <label for="Pickup Location">Vehicle Type:</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected="">All</option>
+                                                    <option value="1">cars</option>
+                                                    <option value="2">..</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-md-4 col-12 pb-3 ">
+                                                <label for="Pickup Location">Driver Age (min):</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected="">24</option>
+                                                    <option value="1">25</option>
+                                                    <option value="2">45</option>
+
+                                                </select>
+
+
+                                            </div>
+
+                                            <div class="form-group col-md-2 col-12 ">
+                                                <label for="inputPassword4">&nbsp;</label>
+
+                                                <input type="button" class=" btn btn-primary form-control  text-white" value="Continue" id="open-table" style="background-color:#000; ">
+                                            </div>
+                                        </div>
+                                        <!-- row ends here -->
+
+                                    </form>
+
+                                    <div class="show_hide_sec" style="display: none;">
+                                        <div class=" py-3">
+                                            <h5>Cars</h5>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                                                    <img src="assets/images/carBooks.png" alt="cars" class="img-fluid">
+                                                    <div class="row text-center mx-auto">
+                                                        <div class="col-3 breif_2"><i class="fa fa-child"></i> x5</div>
+
+                                                        <div class="col-3"><i class="fa fa-child"></i> x4</div>
+
+                                                        <div class="col-3 breif_1"><i class="fa fa-briefcase"></i> x1
+                                                        </div>
+
+                                                        <div class="col-3"><i class="fa fa-briefcase"></i> x2</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-12 cars_details ">
+                                                    <p class="text-success ">COMPACT</p>
+                                                    <h5><u><b>Kia Rio or similar</b></u></h5>
+                                                    <p>FREE Airport Shuttle | FREE Hotel Shuttle</p>
+                                                    <p>Book Now &amp; Pay Later | FREE Cancellation</p>
+                                                    <p>6 Rental Days | Daily Rate $92.77 | Average rate
+
+                                                    </p>
+
+                                                    <p>Available for booking
+
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-sm-12 col-12 mt-4">
+
+                                                    <p class="pt-4"><b>TOTAL AUD $496.74</b></p>
+                                                    <a class="btn btn-Select next bg-dark text-white"> <i class="fas fa-check"></i> Select
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                                                    <img src="assets/images/carss.png" alt="cars" class="img-fluid">
+                                                    <div class="row text-center mx-auto">
+                                                        <div class="col-3 breif_2"><i class="fa fa-child"></i> x5</div>
+
+                                                        <div class="col-3"><i class="fa fa-child"></i> x4</div>
+
+                                                        <div class="col-3 breif_1"><i class="fa fa-briefcase"></i> x1
+                                                        </div>
+
+                                                        <div class="col-3"><i class="fa fa-briefcase"></i> x2</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-12 cars_details ">
+                                                    <p class="text-success ">COMPACT</p>
+                                                    <h5><u><b>Kia Rio or similar</b></u></h5>
+                                                    <p>FREE Airport Shuttle | FREE Hotel Shuttle</p>
+                                                    <p>Book Now &amp; Pay Later | FREE Cancellation</p>
+                                                    <p>6 Rental Days | Daily Rate $92.77 | Average rate
+
+                                                    </p>
+
+                                                    <p>Available for booking
+
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-sm-12 col-12 mt-4">
+
+                                                    <p class="pt-4"><b>TOTAL AUD $496.74</b></p>
+                                                    <a class="btn btn-Select next text-white bg-dark"> <i class="fas fa-check"></i> Select
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+                                            <hr>
+
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                                                    <img src="assets/images/carBookss.png" alt="cars" class="img-fluid">
+                                                    <div class="row text-center mx-auto">
+                                                        <div class="col-3 breif_2"><i class="fa fa-child"></i> x5</div>
+
+                                                        <div class="col-3"><i class="fa fa-child"></i> x4</div>
+
+                                                        <div class="col-3 breif_1"><i class="fa fa-briefcase"></i> x1
+                                                        </div>
+
+                                                        <div class="col-3"><i class="fa fa-briefcase"></i> x2</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-12 cars_details ">
+                                                    <p class="text-success ">MEDIUM SEDAN </p>
+                                                    <h5><u><b>Hyundai i30 Sedan or similar
+                                                            </b></u></h5>
+                                                    <p>FREE Airport Shuttle | FREE Hotel Shuttle</p>
+                                                    <p>Book Now &amp; Pay Later | FREE Cancellation</p>
+                                                    <p>6 Rental Days | Daily Rate $92.77 | Average rate
+
+                                                    </p>
+
+                                                    <p class="text-danger">Unavailable for selected dates
+
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-sm-12 col-12 mt-4">
+
+                                                    <p class="pt-4"><b>TOTAL AUD $496.74</b></p>
+                                                    <a class="btn btn-Select next text-white bg-dark"> <i class="fas fa-check"></i> Select
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_btn pt-5 d-flex justify-content-between">
+                                <button type="button" class="prev_btn text-uppercase bg-white" id="prevBtn" onclick="nextPrev(-1)"><span><i class="fas fa-arrow-left"></i></span> 
+                                    Back</button>
+                                <button type="button" class="next_btn text-white" id="nextBtn" onclick="nextPrev(1)">Next <span><i class="fas fa-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                        <!-- ------------------ Step-3 ------------------- -->
+                        <div class="multisteps_form_panel">
+                            <div class="step_content d-flex justify-content-between pt-5 pb-2">
+                                <h4>Reservations</h4>
+                                <span class="text-end ">Step 3 to 4</span>
+                            </div>
+                            <div class="step_progress_bar">
+                                <div class="progress rounded-pill">
+                                    <div class="progress-bar" style="width:75%"></div>
+                                </div>
+                            </div>
+                            <div class="form_content">
+                                <div class="question_title py-3">
+                                    <h1 class="text-capitalize">Extras</h1>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <img src="assets/images/carss.png" alt="cars" class="img-fluid">
+                                        <div class="row text-center mx-auto">
+                                            <div class="col-3 breif_2"><i class="fa fa-child"></i> x5</div>
+
+                                            <div class="col-3"><i class="fa fa-child"></i> x4</div>
+
+                                            <div class="col-3 breif_1"><i class="fa fa-briefcase"></i> x1</div>
+
+                                            <div class="col-3"><i class="fa fa-briefcase"></i> x2</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-12  ">
+                                        <table class="table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Vehicle :</th>
+                                                    <td scope="col" class="text-success">LARGE SEDAN
+                                                    </td>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Pickup Location :</th>
+                                                    <td>Coconut Grove (Depot)</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Pickup Date &amp; Time :</th>
+                                                    <td>Thursday 13 Oct 2022 10:00</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Return Location :</th>
+                                                    <td colspan="2">Coconut Grove (Depot)</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">Return Date &amp; Time :</th>
+                                                    <td colspan="2">Wednesday 19 Oct 2022 10:00</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">Youngest Driver :</th>
+                                                    <td colspan="2">25 Years</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row py-3">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                        <h5><b>Daily rate:</b></h5>
+
+                                        <table class="table table-borderless">
+
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>6 days @ $82.79</td>
+                                                    <td>$496.74</td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                        <h5><b>Extra Fees:
+                                            </b></h5>
+
+                                        <table class="table table-borderless">
+
+                                            <tbody>
+                                                <tr>
+
+                                                    <td> <i class="fa fa-plus-circle" aria-hidden="true"></i> Total Optional Extras
+                                                    </td>
+                                                    <td>$496.74</td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                        <h5><b>Total: </b></h5>
+
+                                        <table class="table table-borderless">
+
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>AUD$496.74 <span><small>(Inc. include GST: $45.16)</small></span></td>
+
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-12  ">
+                                        <h5><b>Optional Extras:</b></h5>
+                                        <div class="form-group form-check pb-3">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Baby Seat (0-4) @ $12.50 Per
+                                                Day.</label>
+                                        </div>
+
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1"> Booster Seat (4+) @ $12.50 Per
+                                                Day.</label>
+                                        </div>
+                                        <p class="mt-3"><b>Insurance Options:</b></p>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Standard Cover @ $0.00 Per Day
+                                            </label>
+                                        </div>
+
+                                        <h6 class="mt-3"><b>$2000 Excess</b></h6>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Premium Cover @ $27.50 Per Day
+                                            </label>
+                                        </div>
+
+                                        <h6 class="mt-3"><b>$500 Excess</b></h6>
+                                        <h5>Kms Inclusions and Charges</h5>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Unlimited Kms
+        
+                                            </label>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-12  ">
+                                        <h5><b>Optional Extras:</b></h5>
+                                        <div class="form-group row">
+
+                                            <div class="col-sm-3">
+
+                                                <input type="text" class="form-control" id="" placeholder="1">
+                                            </div>
+
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">$75.00
+                                            </label>
+                                        </div>
+
+                                        <div class="form-group row">
+
+                                            <div class="col-sm-3">
+
+                                                <input type="text" class="form-control" id="" placeholder="1">
+                                            </div>
+
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">$75.00
+                                            </label>
+                                        </div>
+                                        <p><b>&nbsp;</b></p>
+
+                                        <div class="form-group row">
+
+                                            <div class="col-sm-3">
+
+                                                <!-- <input type="text" class="form-control" id="" placeholder="1"> -->
+                                            </div>
+
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">$75.00
+                                            </label>
+                                        </div>
+
+                                        <h6>&nbsp;</h6>
+
+                                        <div class="form-group row">
+
+                                            <div class="col-sm-3">
+
+                                                <!-- <input type="text" class="form-control" id="" placeholder="1"> -->
+                                            </div>
+
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">$175.00
+                                            </label>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center align-items-center">
+
+                                        <button class="btn btn-books   text-white bg-dark" id="email_quote">Email Quote </button>
+
+                                        <button class="btn btn-books    text-white bg-dark m-3" id="make_book">Make a Booking </button>
+                                    </div>
+
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 email_quote " style="display: none;">
+                                        <h5>Customer Details (All fields required)
+                                        </h5>
+
+                                        <form>
+                                            <div class="row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputEmail4">First Name :</label>
+                                                    <input type="text" class="form-control" id="">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="inputPassword4">Last Name :</label>
+                                                    <input type="text" class="form-control" id="">
+                                                </div>
+
+                                                <div class="form-group col-md-6 pt-3">
+                                                    <label for="inputEmail4">Email :</label>
+                                                    <input type="email" class="form-control" id="">
+                                                </div>
+                                                <div class="form-group col-md-6 pt-3 ">
+                                                    <label for="inputPassword4">Phone :</label>
+                                                    <input type="text" class="form-control" id="">
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-center align-items-center pt-4">
+                                                <button type="submit" class="btn btn-dark  text-white btn-info ">Get a
+                                                    Quote</button>
+
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="optional_details" style="display: none;">
+                                        <h5>Optional Details </h5>
+
+                                        <form>
+                                            <div class="row">
+                                                <div class="form-group row">
+                                                    <label for="DOB (dd/mm/yyyy) :" class="col-sm-2 col-form-label">DOB
+                                                        (dd/mm/yyyy) :</label>
+                                                    <div class="col-sm-2">
+                                                        <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">Day</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">Month</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-sm-2">
+                                                        <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">year</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <label for="DOB (dd/mm/yyyy) :" class="col-sm-2 col-form-label">Licence No
+                                                        :</label>
+
+                                                    <div class="col-sm-2">
+                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="form-group row">
+                                                    <label for="DOB (dd/mm/yyyy) :" class="col-sm-2 col-form-label">Licence
+                                                        Expiry :</label>
+                                                    <div class="col-sm-2">
+                                                        <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">Day</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">Month</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-sm-2">
+                                                        <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">year</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <label for="DOB (dd/mm/yyyy) :" class="col-sm-2 col-form-label">Licence
+                                                        Issue Country :</label>
+
+                                                    <div class="col-sm-2">
+                                                        <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">Select a Country</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="form-group row">
+                                                    <label for="Address" class="col-sm-2 col-form-label">Address :</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="inputPassword">
+
+                                                    </div>
+
+                                                    <label for="City" class="col-sm-2 col-form-label">City :</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="inputPassword">
+
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row pt-3">
+                                                <div class="form-group row">
+                                                    <label for="State" class="col-sm-2 col-form-label">State :</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="inputPassword">
+
+                                                    </div>
+
+                                                    <label for="Postcode/ZIP" class="col-sm-2 col-form-label">Postcode/ZIP
+                                                        :</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="inputPassword">
+
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row pt-3">
+                                                <div class="form-group row">
+                                                    <label for="Country " class="col-sm-2 col-form-label">Country :</label>
+                                                    <div class="col-sm-4">
+                                                        <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">Select a country</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <label for="Postcode/ZIP" class="col-sm-2 col-form-label">Country :</label>
+                                                    <div class="col-sm-4">
+                                                        <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">How did you find us? :</option>
+                                                            <option value="1">online search</option>
+                                                            <option value="2">Repeat customer</option>
+                                                            <option value="3">yellow pages</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row pt-3">
+                                                <div class="form-group row">
+                                                    <label for="Area of Use?  " class="col-sm-2 col-form-label">Area of Use?
+                                                        :</label>
+                                                    <div class="col-sm-4">
+                                                        <select class="form-select mb-3" aria-label=".form-select-lg example">
+                                                            <option selected="">Select Area of Use? </option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <label for="Collection Point " class="col-sm-2 col-form-label">Collection
+                                                        Point :</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="Comments">Comments :</label>
+                                                    <textarea class="form-control" id="Comments" rows="3"></textarea>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="d-flex justify-content-center align-items-center pt-4">
+                                                <button class="btn btn-dark  text-white btn-info ">Book Now</button>
+
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form_btn pt-5 d-flex justify-content-between">
+                                <button type="button" class="prev_btn text-uppercase bg-white" id="prevBtn" onclick="nextPrev(-1)"><span><i class="fas fa-arrow-left"></i></span> 
+                                    Back</button>
+                                <button type="button" class="next_btn text-white" id="nextBtn" onclick="nextPrev(1)">Next <span><i class="fas fa-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                        <!-- ------------------ Step-4 ------------------- -->
+                        <div class="multisteps_form_panel">
+                            <div class="step_content d-flex justify-content-between pt-5 pb-2">
+                                <h4>Confirm</h4>
+                                <span class="text-end ">Step 4 to 4</span>
+                            </div>
+                            <div class="step_progress_bar">
+                                <div class="progress rounded-pill">
+                                    <div class="progress-bar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="form_content">
+
+                                <div class="row ">
+                                    <div class="py-3 text-center">
+                                        <h3>Booking Request Completed
+                                        </h3>
+
+                                        <img src="assets/images/tys.png" alt="ty" class="img-fluid">
+                                        <p>You have successfully completed all steps.</p>
+                                        <p>Booking Reference Number</p>
+                                        <h5>769</h5>
+                                        <h3>
+                                            Request Details
+                                        </h3>
+
+                                        <p>First Name : <span>Wilma</span></p>
+                                        <p>Last Name : <span>ilsa</span></p>
+                                        <p>Phone :<span>+1 (223) 598-2251
+                                            </span></p>
+                                        <p>Email : <span>situpu@mailinator.com</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_btn pt-5 d-flex justify-content-between">
+                                <button type="button" class="prev_btn text-uppercase bg-white" id="prevBtn" onclick="nextPrev(-1)"><span><i class="fas fa-arrow-left"></i></span> 
+                                    Back</button>
+                                <button type="button" class="next_btn  text-white" id="nextBtn" onclick="nextPrev(1)">Next <span><i class="fas fa-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery-js include -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Countdown-js include -->
+    <script src="./assets/js/countdown.js"></script>
+    <!-- Bootstrap-js include -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- jQuery-validate-js include -->
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <!-- Custom-js include -->
+    <script src="./assets/js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"></script>
+
+    <script>
+        $(function() {
+            $('#datepicker').datepicker();
+        });
+
+        $(function() {
+            $('#datepicker_1').datepicker();
+        });
+
+        // show div
+
+        // $('#show').show('show_hide_sec');
+
+        $(document).on('click', '#open-table', function() {
+            $('.show_hide_sec').css('display', 'block');
+        });
+
+        $(document).on('click', '#email_quote', function() {
+            $('.email_quote').css('display', 'block');
+        });
+
+
+        $(document).on('click', '#make_book', function() {
+            $('.optional_details').css('display', 'block');
+        });
+    </script>
+</body>
+
+</html>
